@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ═══════════════════════════════════════════════════
+       JAIN University – Spot Counselling 2026
+       registration.html  |  Multi-step registration form
+  ═══════════════════════════════════════════════════ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Register – Spot Counselling 2026 | JAIN University</title>
+  <meta name="description" content="Register for JAIN University Spot Counselling 2026. Free registration. Get on-the-spot admission decisions and scholarship guidance in your city.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spotcounselling.jainuniversity.co.in/registration.html">
+
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' https:;
+    script-src 'self' https://fonts.googleapis.com;
+    style-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com 'unsafe-inline';
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https:;
+    connect-src 'self';
+    frame-ancestors 'none';
+    base-uri 'self';
+    form-action 'self'
+  ">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <link rel="icon" type="image/png" href="assets/Jain-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* ── Registration page extras ── */
+    .reg-page { background: var(--brand-bg); min-height: calc(100vh - 72px); padding: 52px 28px 80px; }
+    .reg-wrap {
+      max-width: 1140px; margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 460px;
+      gap: 52px;
+      align-items: start;
+    }
+
+    /* Left panel */
+    .reg-header {
+      background: linear-gradient(135deg, var(--brand-dark) 0%, #0f3460 100%);
+      border-radius: var(--radius-lg);
+      padding: 44px 38px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .reg-header::before {
+      content:''; position:absolute;
+      top:-60px; right:-60px;
+      width:280px; height:280px;
+      background:radial-gradient(circle, rgba(244,121,32,.28) 0%, transparent 70%);
+      border-radius:50%;
+    }
+    .reg-header .event-badge {
+      display:inline-flex; align-items:center; gap:6px;
+      background:rgba(244,121,32,.18);
+      border:1px solid rgba(244,121,32,.45);
+      color:#ffb570;
+      font-family:var(--font-head); font-size:11px; font-weight:700;
+      letter-spacing:1.5px; text-transform:uppercase;
+      padding:6px 16px; border-radius:30px; margin-bottom:20px;
+    }
+    .reg-header .live-dot {
+      width:7px; height:7px; border-radius:50%;
+      background:var(--brand-orange);
+      animation: pulse 1.5s infinite;
+    }
+    .reg-header h1 {
+      font-family:var(--font-head);
+      font-size:clamp(24px, 3vw, 34px);
+      font-weight:900; line-height:1.15;
+      margin-bottom:14px; position:relative;
+    }
+    .reg-header h1 em { color:var(--brand-orange); font-style:normal; }
+    .reg-header p { font-size:14.5px; color:rgba(255,255,255,.72); line-height:1.7; position:relative; }
+
+    /* City pills */
+    .city-quick-card { background:#fff; border-radius:var(--radius-md); padding:26px; border:1px solid var(--brand-border); margin-bottom:22px; }
+    .city-quick-card h3 { font-family:var(--font-head); font-size:14px; font-weight:700; color:var(--brand-dark); margin-bottom:5px; }
+    .city-quick-card p { font-size:12.5px; color:var(--brand-muted); margin-bottom:16px; }
+    .city-pills { display:flex; flex-wrap:wrap; gap:8px; }
+    .city-pill {
+      background:var(--brand-orange-lt);
+      border:1.5px solid transparent;
+      color:var(--brand-orange-dk);
+      font-family:var(--font-head); font-size:12px; font-weight:600;
+      padding:6px 14px; border-radius:30px; cursor:pointer;
+      transition: all var(--transition);
+    }
+    .city-pill:hover, .city-pill.selected {
+      background:var(--brand-orange); color:#fff; border-color:var(--brand-orange);
+    }
+
+    /* Perks */
+    .perks-card { background:#fff; border-radius:var(--radius-md); padding:26px; border:1px solid var(--brand-border); }
+    .perks-card h3 { font-family:var(--font-head); font-size:14px; font-weight:700; color:var(--brand-dark); margin-bottom:18px; }
+    .perk-row { display:flex; align-items:flex-start; gap:14px; padding:12px 0; border-bottom:1px solid #f5f5f5; }
+    .perk-row:last-child { border-bottom:none; }
+    .perk-ic {
+      width:38px; height:38px; border-radius:var(--radius-sm);
+      background:var(--brand-orange-lt);
+      display:flex; align-items:center; justify-content:center;
+      font-size:18px; flex-shrink:0;
+    }
+    .perk-txt h4 { font-family:var(--font-head); font-size:13px; font-weight:700; color:var(--brand-dark); margin-bottom:3px; }
+    .perk-txt p  { font-size:12.5px; color:var(--brand-muted); line-height:1.5; }
+
+    /* ── FORM CARD ── */
+    .form-card {
+      background:#fff;
+      border-radius:20px;
+      box-shadow: var(--shadow-lg);
+      padding:42px 38px;
+      position:sticky;
+      top:90px;
+    }
+    .form-card h2 { font-family:var(--font-head); font-size:20px; font-weight:800; color:var(--brand-dark); margin-bottom:5px; }
+    .form-subtitle { font-size:13px; color:var(--brand-muted); margin-bottom:28px; }
+
+    /* Progress */
+    .prog-wrap { margin-bottom:28px; }
+    .prog-labels { display:flex; justify-content:space-between; margin-bottom:8px; }
+    .progress-label { font-family:var(--font-head); font-size:11px; font-weight:600; color:var(--brand-muted); }
+    .progress-label.active-lbl { color:var(--brand-orange); }
+    .progress-label.done { color:var(--brand-success); }
+    .prog-track { height:4px; background:#f0f0f0; border-radius:10px; overflow:hidden; }
+    .prog-fill { height:100%; background:linear-gradient(90deg, var(--brand-orange), #ffb570); border-radius:10px; transition:width .5s ease; }
+
+    /* Steps */
+    .form-step { display:none; }
+    .form-step.active { display:block; }
+
+    /* Fields */
+    .field { margin-bottom:18px; }
+    .field-row { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    label {
+      display:block;
+      font-family:var(--font-head); font-size:12px; font-weight:700;
+      color:var(--brand-text); margin-bottom:7px; letter-spacing:.3px;
+    }
+    label .req { color:var(--brand-orange); }
+    input[type="text"],input[type="email"],input[type="tel"],
+    input[type="number"],select,textarea {
+      width:100%; padding:11px 14px;
+      border:1.5px solid var(--brand-border);
+      border-radius:var(--radius-sm);
+      font-family:var(--font-body); font-size:13.5px;
+      color:var(--brand-text); background:#fafafa;
+      transition:border-color var(--transition), box-shadow var(--transition), background var(--transition);
+      outline:none; appearance:none; -webkit-appearance:none;
+    }
+    input:focus,select:focus,textarea:focus {
+      border-color:var(--brand-orange);
+      box-shadow:0 0 0 3px rgba(244,121,32,.12);
+      background:#fff;
+    }
+    input.is-error,select.is-error,textarea.is-error {
+      border-color:var(--brand-error);
+      box-shadow:0 0 0 3px rgba(239,68,68,.1);
+    }
+    .err-msg { display:none; color:var(--brand-error); font-size:11.5px; margin-top:5px; font-weight:600; }
+    .err-msg.show { display:block; }
+    select {
+      cursor:pointer;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 14px center; padding-right:38px;
+    }
+    textarea { resize:vertical; min-height:80px; }
+    .phone-wrap { display:flex; }
+    .phone-prefix {
+      padding:11px 12px;
+      background:#f0f0f0;
+      border:1.5px solid var(--brand-border); border-right:none;
+      border-radius:var(--radius-sm) 0 0 var(--radius-sm);
+      font-size:13px; font-weight:600; color:var(--brand-muted); white-space:nowrap;
+      line-height:1.6;
+    }
+    .phone-wrap input { border-radius:0 var(--radius-sm) var(--radius-sm) 0; }
+    .check-group { display:flex; flex-direction:column; gap:10px; }
+    .check-item { display:flex; align-items:center; gap:10px; cursor:pointer; font-size:13.5px; color:var(--brand-text); }
+    .check-item input[type="checkbox"], .check-item input[type="radio"] {
+      width:16px; height:16px; accent-color:var(--brand-orange); cursor:pointer; flex-shrink:0;
+    }
+
+    /* Venue info */
+    .venue-box {
+      background:var(--brand-orange-lt);
+      border:1.5px solid rgba(244,121,32,.3);
+      border-radius:var(--radius-md);
+      padding:14px 16px; margin-top:12px; display:none;
+    }
+    .venue-box.show { display:block; }
+    .venue-box h4 { font-family:var(--font-head); font-size:12px; font-weight:700; color:var(--brand-orange-dk); margin-bottom:4px; }
+    .venue-box p  { font-size:12.5px; color:var(--brand-orange-dk); }
+
+    /* Nav buttons */
+    .form-nav { display:flex; gap:12px; margin-top:28px; }
+    .btn-form-next,.btn-form-submit {
+      flex:1; background:var(--brand-orange); color:#fff; border:none;
+      padding:14px 22px; border-radius:var(--radius-md);
+      font-family:var(--font-head); font-size:14px; font-weight:700;
+      transition:background var(--transition), transform var(--transition);
+    }
+    .btn-form-next:hover,.btn-form-submit:hover { background:var(--brand-orange-dk); transform:translateY(-1px); }
+    .btn-form-back {
+      background:#f0f0f0; color:var(--brand-muted); border:none;
+      padding:14px 18px; border-radius:var(--radius-md);
+      font-family:var(--font-head); font-size:14px; font-weight:700;
+      transition:background var(--transition);
+    }
+    .btn-form-back:hover { background:#e0e0e0; }
+
+    /* Step dots */
+    .step-dots { display:flex; justify-content:center; gap:8px; margin-top:20px; }
+    .step-dot { width:8px; height:8px; border-radius:50%; background:#e0e0e0; transition:all .3s; }
+    .step-dot.active { background:var(--brand-orange); width:24px; border-radius:4px; }
+    .step-dot.done { background:var(--brand-success); }
+
+    /* Success */
+    .success-screen { display:none; text-align:center; padding:16px 0; }
+    .success-screen.show { display:block; }
+    .success-icon {
+      width:84px; height:84px;
+      background:linear-gradient(135deg, var(--brand-success), #16a34a);
+      border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-size:38px; margin:0 auto 24px;
+      animation:popIn .55s cubic-bezier(.34,1.56,.64,1) both;
+    }
+    @keyframes popIn { from{transform:scale(0);opacity:0} to{transform:scale(1);opacity:1} }
+    .success-screen h2 { font-family:var(--font-head); font-size:22px; font-weight:800; color:var(--brand-dark); margin-bottom:10px; }
+    .success-screen > p { font-size:14px; color:var(--brand-muted); line-height:1.7; margin-bottom:8px; }
+    .confirm-box { background:var(--brand-orange-lt); border-radius:var(--radius-md); padding:20px; margin:22px 0; text-align:left; }
+    .conf-row { display:flex; justify-content:space-between; font-size:13px; padding:7px 0; border-bottom:1px solid rgba(244,121,32,.15); }
+    .conf-row:last-child { border-bottom:none; }
+    .conf-row span:first-child { color:var(--brand-muted); font-weight:600; }
+    .conf-row span:last-child  { color:var(--brand-dark);  font-weight:700; }
+    .btn-back-home {
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--brand-dark); color:#fff;
+      font-family:var(--font-head); font-size:14px; font-weight:700;
+      padding:13px 28px; border-radius:var(--radius-md); border:none;
+      margin-top:10px; transition:background var(--transition);
+    }
+    .btn-back-home:hover { background:#0f3460; }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .reg-wrap { grid-template-columns:1fr; }
+      .form-card { position:static; }
+    }
+    @media (max-width: 500px) {
+      .field-row { grid-template-columns:1fr; }
+      .form-card { padding:28px 20px; }
+      .reg-header { padding:28px 22px; }
+      .reg-page { padding:32px 16px 60px; }
+    }
+
+    /* Screen-reader only */
+    .sr-only {
+      position:absolute; width:1px; height:1px;
+      padding:0; margin:-1px; overflow:hidden;
+      clip:rect(0,0,0,0); border:0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html" aria-label="JAIN University Home">
+      <img src="assets/Jain-logo.png" alt="JAIN (Deemed-to-be University)" width="180" height="44">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html#schedule">Schedule</a></li>
+      <li><a href="index.html#courses">Courses</a></li>
+      <li><a href="index.html#about">About JU</a></li>
+      <li><a href="index.html#faq">FAQs</a></li>
+      <li><a href="index.html" style="color:var(--brand-muted); font-size:13px;">← Back to Home</a></li>
+    </ul>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav id="navMobile" class="nav-mobile" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="index.html#schedule">Schedule</a></li>
+      <li><a href="index.html#courses">Courses</a></li>
+      <li><a href="index.html#faq">FAQs</a></li>
+      <li><a href="index.html">← Back to Home</a></li>
+    </ul>
+  </nav>
+</nav>
+
+<!-- ═══ REG PAGE ═══ -->
+<main class="reg-page" id="regMain">
+  <div class="reg-wrap">
+
+    <!-- LEFT PANEL -->
+    <aside aria-label="Session details and benefits">
+      <div class="reg-header">
+        <div class="event-badge"><span class="live-dot"></span>Spot Counselling 2026</div>
+        <h1>Register &amp; Secure<br>Your <em>Admission</em> Today</h1>
+        <p>Fill in your details to pre-register for the Spot Counselling session nearest to you. Get on-the-spot decisions, scholarship evaluation, and expert guidance.</p>
+      </div>
+
+      <!-- City pills -->
+      <div class="city-quick-card">
+        <h3>📍 Quick-Select Your City</h3>
+        <p>Tap a city to auto-fill the registration form</p>
+        <div class="city-pills" role="list">
+          <button class="city-pill" data-city="Lucknow"    role="listitem">Lucknow</button>
+          <button class="city-pill" data-city="Prayagraj"  role="listitem">Prayagraj</button>
+          <button class="city-pill" data-city="Varanasi"   role="listitem">Varanasi</button>
+          <button class="city-pill" data-city="Gorakhpur"  role="listitem">Gorakhpur</button>
+          <button class="city-pill" data-city="Guwahati"   role="listitem">Guwahati</button>
+          <button class="city-pill" data-city="Jorhat"     role="listitem">Jorhat</button>
+          <button class="city-pill" data-city="Dibrugarh"  role="listitem">Dibrugarh</button>
+          <button class="city-pill" data-city="Tinsukia"   role="listitem">Tinsukia</button>
+          <button class="city-pill" data-city="Patna"      role="listitem">Patna</button>
+          <button class="city-pill" data-city="Ahmedabad"  role="listitem">Ahmedabad</button>
+          <button class="city-pill" data-city="Ranchi"     role="listitem">Ranchi</button>
+          <button class="city-pill" data-city="Kannur"     role="listitem">Kannur</button>
+          <button class="city-pill" data-city="Dimapur"    role="listitem">Dimapur</button>
+          <button class="city-pill" data-city="Puducherry" role="listitem">Puducherry</button>
+          <button class="city-pill" data-city="Hosur"      role="listitem">Hosur</button>
+          <button class="city-pill" data-city="Agartala"   role="listitem">Agartala</button>
+          <button class="city-pill" data-city="Vijayawada" role="listitem">Vijayawada</button>
+        </div>
+      </div>
+
+      <!-- Perks -->
+      <div class="perks-card">
+        <h3>What You Get at Spot Counselling</h3>
+        <div class="perk-row">
+          <div class="perk-ic">⚡</div>
+          <div class="perk-txt"><h4>Instant Admission Decision</h4><p>Walk in, meet our team, and leave with your offer letter the same day.</p></div>
+        </div>
+        <div class="perk-row">
+          <div class="perk-ic">💰</div>
+          <div class="perk-txt"><h4>Scholarship Assessment</h4><p>Get your profile evaluated on-site for merit scholarships up to ₹2 Lakhs.</p></div>
+        </div>
+        <div class="perk-row">
+          <div class="perk-ic">🗓️</div>
+          <div class="perk-txt"><h4>Priority Slot Booking</h4><p>Registered students get dedicated time slots — no long queues.</p></div>
+        </div>
+        <div class="perk-row">
+          <div class="perk-ic">📞</div>
+          <div class="perk-txt"><h4>Reminder &amp; Venue Updates</h4><p>Our team calls you 48 hrs before the event to confirm your slot.</p></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- FORM CARD -->
+    <div class="form-card" id="formCard" aria-live="polite">
+      <h2>Free Registration</h2>
+      <p class="form-subtitle">Takes less than 2 minutes · No fees required</p>
+
+      <!-- Progress bar -->
+      <div class="prog-wrap" id="progressWrap">
+        <div class="prog-labels">
+          <span class="progress-label active-lbl" id="lbl1">Personal</span>
+          <span class="progress-label" id="lbl2">Academic</span>
+          <span class="progress-label" id="lbl3">Preferences</span>
+        </div>
+        <div class="prog-track"><div class="prog-fill" id="progressFill" style="width:33%"></div></div>
+      </div>
+
+      <form id="regForm" novalidate autocomplete="on">
+
+        <!-- ── STEP 1: Personal ── -->
+        <div class="form-step active" id="step1">
+          <div class="field-row">
+            <div class="field">
+              <label for="firstName">First Name <span class="req">*</span></label>
+              <input type="text" id="firstName" name="firstName" autocomplete="given-name" placeholder="Rahul" maxlength="60" inputmode="text">
+              <div class="err-msg" id="errFirstName" role="alert"></div>
+            </div>
+            <div class="field">
+              <label for="lastName">Last Name <span class="req">*</span></label>
+              <input type="text" id="lastName" name="lastName" autocomplete="family-name" placeholder="Sharma" maxlength="60">
+              <div class="err-msg" id="errLastName" role="alert"></div>
+            </div>
+          </div>
+          <div class="field">
+            <label for="phone">Mobile Number <span class="req">*</span></label>
+            <div class="phone-wrap">
+              <span class="phone-prefix" aria-hidden="true">🇮🇳 +91</span>
+              <input type="tel" id="phone" name="phone" autocomplete="tel-national" placeholder="9876543210" maxlength="10" inputmode="numeric">
+            </div>
+            <div class="err-msg" id="errPhone" role="alert"></div>
+          </div>
+          <div class="field">
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="rahul@gmail.com" maxlength="120">
+            <div class="err-msg" id="errEmail" role="alert"></div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="dob">Date of Birth</label>
+              <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY" autocomplete="bday" maxlength="10">
+            </div>
+            <div class="field">
+              <label for="gender">Gender <span class="req">*</span></label>
+              <select id="gender" name="gender" autocomplete="sex">
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+              <div class="err-msg" id="errGender" role="alert"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── STEP 2: Academic ── -->
+        <div class="form-step" id="step2">
+          <div class="field-row">
+            <div class="field">
+              <label for="eduLevel">Current Education Level <span class="req">*</span></label>
+              <select id="eduLevel" name="eduLevel">
+                <option value="">Select</option>
+                <option value="class12-appearing">Class 12 – Appearing</option>
+                <option value="class12-completed">Class 12 – Completed</option>
+                <option value="ug-pursuing">UG Pursuing</option>
+                <option value="ug-completed">UG Completed</option>
+                <option value="pg-pursuing">PG Pursuing</option>
+                <option value="working">Working Professional</option>
+              </select>
+              <div class="err-msg" id="errEduLevel" role="alert"></div>
+            </div>
+            <div class="field">
+              <label for="stream">Stream / Board</label>
+              <select id="stream" name="stream">
+                <option value="">Select Stream</option>
+                <option value="pcm">Science – PCM</option>
+                <option value="pcb">Science – PCB</option>
+                <option value="commerce">Commerce</option>
+                <option value="arts">Arts / Humanities</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="marks">12th Marks / CGPA</label>
+              <input type="text" id="marks" name="marks" placeholder="e.g. 85% or 8.5 CGPA" maxlength="20">
+            </div>
+            <div class="field">
+              <label for="passYear">Passing Year</label>
+              <select id="passYear" name="passYear">
+                <option value="">Year</option>
+                <option value="2026">2026 – Appearing</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="older">2021 or before</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label>Entrance Exams Appeared <span style="font-weight:400;color:var(--brand-muted)">(Select all that apply)</span></label>
+            <div class="check-group">
+              <label class="check-item"><input type="checkbox" name="exams" value="JEE">JEE Main / Advanced</label>
+              <label class="check-item"><input type="checkbox" name="exams" value="NEET">NEET</label>
+              <label class="check-item"><input type="checkbox" name="exams" value="CAT">CAT / MAT / CMAT</label>
+              <label class="check-item"><input type="checkbox" name="exams" value="CLAT">CLAT / AILET (Law)</label>
+              <label class="check-item"><input type="checkbox" name="exams" value="CUET">CUET</label>
+              <label class="check-item"><input type="checkbox" name="exams" value="none">None / Not Applicable</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── STEP 3: Preferences ── -->
+        <div class="form-step" id="step3">
+          <div class="field">
+            <label for="program">Preferred Program <span class="req">*</span></label>
+            <select id="program" name="program">
+              <option value="">Select a Program</option>
+              <optgroup label="Engineering &amp; Technology">
+                <option>B.Tech – CSE (Core)</option>
+                <option>B.Tech – CSE in AI &amp; ML</option>
+                <option>B.Tech – CSE in Data Science</option>
+                <option>B.Tech – CSE in Cyber Security</option>
+                <option>B.Tech – CSE in Cloud Computing</option>
+                <option>B.Tech – Electronics &amp; Communication</option>
+                <option>B.Tech – Mechanical Engineering</option>
+                <option>B.Tech – Civil Engineering</option>
+                <option>B.Tech – Aerospace Engineering</option>
+                <option>BCA – Artificial Intelligence</option>
+                <option>BCA – Cyber Security</option>
+                <option>BCA – Data Analytics</option>
+                <option>M.Tech – Computer Science</option>
+                <option>M.Tech – Data Science</option>
+                <option>MCA</option>
+              </optgroup>
+              <optgroup label="Management">
+                <option>BBA – Corporate</option>
+                <option>BBA – Finance &amp; Accounting (ACCA-UK)</option>
+                <option>BBA – Entrepreneurship</option>
+                <option>BBA – Sports Management</option>
+                <option>BBA – Branding &amp; Advertising</option>
+                <option>BBA – Strategic Finance (US CMA)</option>
+                <option>BMS – Bachelor of Management Studies</option>
+                <option>MBA – Marketing</option>
+                <option>MBA – Finance</option>
+                <option>MBA – Human Resource Management</option>
+                <option>MBA – Business Analytics</option>
+                <option>MBA – Digital Marketing</option>
+                <option>MBA – Aviation Management</option>
+                <option>MBA – Dual Specialisation</option>
+              </optgroup>
+              <optgroup label="Sciences">
+                <option>B.Sc. Biotechnology</option>
+                <option>B.Sc. Microbiology</option>
+                <option>B.Sc. Forensic Science</option>
+                <option>B.Sc. Computer Science</option>
+                <option>B.Sc. Data Science</option>
+                <option>B.Sc. Psychology</option>
+                <option>M.Sc. Data Science</option>
+                <option>M.Sc. Biotechnology</option>
+              </optgroup>
+              <optgroup label="Commerce">
+                <option>B.Com – General</option>
+                <option>B.Com – International Accounting &amp; Finance (ACCA-UK)</option>
+                <option>B.Com – Taxation</option>
+                <option>M.Com</option>
+              </optgroup>
+              <optgroup label="Design &amp; Media">
+                <option>B.Des. Communication Design</option>
+                <option>B.Sc. Interior Design</option>
+                <option>B.Sc. Fashion Design</option>
+                <option>B.Sc. Animation &amp; VFX</option>
+                <option>M.Des. Strategic Innovation &amp; Design</option>
+                <option>BA Journalism &amp; Mass Communication</option>
+              </optgroup>
+              <optgroup label="Law &amp; Humanities">
+                <option>BA LLB (Hons.) – 5 Years</option>
+                <option>B.Com LLB (Hons.) – 5 Years</option>
+                <option>LLB (Hons.) – 3 Years</option>
+                <option>BA Economics</option>
+                <option>BA English Literature</option>
+                <option>B.Ed.</option>
+              </optgroup>
+              <option value="guidance">Not sure – Need Guidance</option>
+            </select>
+            <div class="err-msg" id="errProgram" role="alert"></div>
+          </div>
+
+          <div class="field">
+            <label for="citySelect">Spot Counselling City <span class="req">*</span></label>
+            <select id="citySelect" name="city">
+              <option value="">Select City</option>
+              <option value="Lucknow">Lucknow – 12th April</option>
+              <option value="Prayagraj">Prayagraj – 16th April</option>
+              <option value="Vijayawada">Vijayawada – 25th April</option>
+              <option value="Guwahati">Guwahati – 19th April</option>
+              <option value="Jorhat">Jorhat – 23rd April</option>
+              <option value="Dibrugarh">Dibrugarh – 25th April</option>
+              <option value="Tinsukia">Tinsukia – 26th April</option>
+              <option value="Patna">Patna – 3rd May</option>
+              <option value="Ahmedabad">Ahmedabad – 26th April</option>
+              <option value="Ranchi">Ranchi – 19th April</option>
+              <option value="Kannur">Kannur – 26th April</option>
+              <option value="Dimapur">Dimapur – 21st April</option>
+              <option value="Puducherry">Puducherry – 19th April</option>
+              <option value="Hosur">Hosur – 3rd May</option>
+              <option value="Agartala">Agartala – 3rd May</option>
+              <option value="Varanasi">Varanasi – 19th April</option>
+              <option value="Gorakhpur">Gorakhpur – 23rd April</option>
+            </select>
+            <div class="err-msg" id="errCity" role="alert"></div>
+            <div class="venue-box" id="venueInfoBox">
+              <h4>📅 Your Session Details</h4>
+              <p id="venueInfoText"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="source">How did you hear about this?</label>
+            <select id="source" name="source">
+              <option value="">Select</option>
+              <option value="whatsapp">WhatsApp / Social Media</option>
+              <option value="school">School / College</option>
+              <option value="friend">Friend / Family</option>
+              <option value="newspaper">Newspaper / Advertisement</option>
+              <option value="website">JU Website</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Questions for our Counsellor? <span style="font-weight:400;color:var(--brand-muted)">(Optional)</span></label>
+            <textarea id="message" name="message" maxlength="500" placeholder="e.g. I want to know about scholarship options for B.Tech CSE..."></textarea>
+          </div>
+
+          <label class="check-item" style="align-items:flex-start; gap:10px; margin-top:4px;">
+            <input type="checkbox" id="consent" name="consent">
+            <span style="font-size:12.5px;color:var(--brand-muted);line-height:1.5;">I consent to JAIN University contacting me regarding admissions, counselling events, and scholarship opportunities via phone, SMS, email, or WhatsApp. <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener" style="color:var(--brand-orange);">Privacy Policy</a></span>
+          </label>
+          <div class="err-msg" id="errConsent" role="alert"></div>
+        </div>
+
+      </form>
+
+      <!-- Success screen -->
+      <div class="success-screen" id="successScreen">
+        <div class="success-icon" aria-label="Success">✓</div>
+        <h2>You're Registered!</h2>
+        <p>Your priority slot has been reserved. Our team will call you 48 hours before the event to confirm your schedule and share final venue details.</p>
+        <div class="confirm-box" id="confirmBox" aria-label="Registration summary"></div>
+        <p style="font-size:12px;color:var(--brand-muted);">Confirmation sent to your email. Questions? Call <strong style="color:var(--brand-dark);">+91 73376 18222</strong></p>
+        <a href="index.html" class="btn-back-home">← Back to Schedule</a>
+      </div>
+
+      <!-- Form navigation -->
+      <div class="form-nav" id="formNav">
+        <button class="btn-form-back" id="btnBack" style="display:none;" aria-label="Go to previous step">← Back</button>
+        <button class="btn-form-next" id="btnNext" aria-label="Continue to next step">Continue →</button>
+      </div>
+
+      <!-- Step dots -->
+      <div class="step-dots" id="stepDots" aria-hidden="true">
+        <div class="step-dot active" id="dot1"></div>
+        <div class="step-dot" id="dot2"></div>
+        <div class="step-dot" id="dot3"></div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer role="contentinfo" style="padding:32px 28px;">
+  <div style="max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(255,255,255,.1);padding-top:20px;font-size:12.5px;color:rgba(255,255,255,.5);">
+    <span>© 2026 JAIN (Deemed-to-be University). All Rights Reserved.</span>
+    <a href="tel:+917337618222" style="color:var(--brand-orange);font-weight:700;font-size:13px;">+91 73376 18222</a>
+  </div>
+</footer>
+
+<!-- ═══ WHATSAPP WIDGET ═══ -->
+<div class="wa-widget" role="complementary" aria-label="WhatsApp chat">
+  <div class="wa-bubble" id="waBubble" role="dialog" aria-label="WhatsApp chat prompt">
+    <button class="wa-close" id="waClose" aria-label="Close">✕</button>
+    <strong>👋 Need help registering?</strong>
+    Chat with our admissions team on WhatsApp — we're available 9 AM – 7 PM.
+  </div>
+  <button class="wa-btn" id="waBtn" aria-label="Open WhatsApp chat" title="Chat with admissions on WhatsApp">
+    <span class="wa-badge" id="waBadge" aria-label="1 new message">1</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+</div>
+
+<!-- Scripts -->
+<script src="js/main.js" defer></script>
+<script src="js/registration.js" defer></script>
+<script>
+  /* Pre-select city from URL query string – safe, no eval */
+  (function() {
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var city = params.get('city');
+      if (city) {
+        var allowed = ['Lucknow','Prayagraj','Varanasi','Gorakhpur','Guwahati','Jorhat',
+          'Dibrugarh','Tinsukia','Patna','Ahmedabad','Ranchi','Kannur',
+          'Dimapur','Puducherry','Hosur','Agartala','Vijayawada'];
+        if (allowed.indexOf(city) !== -1) {
+          document.addEventListener('DOMContentLoaded', function() {
+            if (window.JU) window.JU.quickSelectCity(city);
+          });
+        }
+      }
+    } catch(e) {}
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ═══════════════════════════════════════════════════
+       JAIN University – Spot Counselling 2026
+       index.html  |  Main landing page
+       Hosted at: https://spotcounselling.jainuniversity.co.in
+  ═══════════════════════════════════════════════════ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO -->
+  <title>Spot Counselling 2026 | JAIN (Deemed-to-be University)</title>
+  <meta name="description" content="JAIN University Spot Counselling 2026 – Get on-the-spot admission, scholarship evaluation and career guidance in 17 cities across India. Register free today.">
+  <meta name="keywords" content="JAIN University admissions, spot counselling 2026, JU counselling, Bangalore university admission, BTech MBA BBA admissions 2026">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://spotcounselling.jainuniversity.co.in/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Spot Counselling 2026 | JAIN (Deemed-to-be University)">
+  <meta property="og:description" content="Get on-the-spot admission & scholarship evaluation in your city. 17 cities across India.">
+  <meta property="og:url" content="https://spotcounselling.jainuniversity.co.in/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://spotcounselling.jainuniversity.co.in/assets/og-image.jpg">
+
+  <!-- Security Headers (also set these on the server / .htaccess) -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' https:;
+    script-src 'self' https://fonts.googleapis.com;
+    style-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com 'unsafe-inline';
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https:;
+    connect-src 'self';
+    frame-ancestors 'none';
+    base-uri 'self';
+    form-action 'self'
+  ">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/Jain-logo.png">
+  <link rel="apple-touch-icon" href="assets/Jain-logo.png">
+
+  <!-- Fonts (preconnect first) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Registration-page inline overrides (not needed on index) -->
+  <style>
+    /* Index-only extras */
+    .hero-scroll-hint {
+      margin-top:40px;
+      display:flex; flex-direction:column; align-items:center; gap:6px;
+      color:rgba(255,255,255,.4); font-size:12px; letter-spacing:1px;
+      animation: fadeIn 1s 1.5s ease both;
+    }
+    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+    .scroll-arrow { font-size:20px; animation: bounce 2s infinite; }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(6px)} }
+    .courses-section { background:#fff; }
+    .about-section { background: var(--brand-bg); }
+    .testi-section { background:#fff; }
+    .faq-section   { background: var(--brand-bg); }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a class="nav-logo" href="/" aria-label="JAIN University Home">
+      <img src="assets/Jain-logo.png" alt="JAIN (Deemed-to-be University)" width="180" height="44">
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#about">About JU</a></li>
+      <li><a href="#faq">FAQs</a></li>
+      <li><a href="registration.html" class="btn-nav-cta">Register Free →</a></li>
+    </ul>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav id="navMobile" class="nav-mobile" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#about">About JU</a></li>
+      <li><a href="#faq">FAQs</a></li>
+      <li><a href="registration.html" style="color:var(--brand-orange)">Register Free →</a></li>
+    </ul>
+  </nav>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="home" aria-label="Spot Counselling 2026">
+  <div class="hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb-2" aria-hidden="true"></div>
+  <div class="hero-badge">
+    <span class="live-dot" aria-hidden="true"></span>
+    Admissions 2026 · Closing Soon
+  </div>
+  <h1>Spot Counselling<br><em>Coming to Your City</em></h1>
+  <p>Meet JAIN University representatives directly in your city. Get instant admission decisions, scholarship evaluation and expert career guidance — all in one powerful session.</p>
+  <div class="hero-actions">
+    <a href="registration.html" class="btn-primary">Register for Free →</a>
+    <a href="#schedule" class="btn-outline">View Schedule</a>
+  </div>
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <span>SCROLL</span>
+    <span class="scroll-arrow">↓</span>
+  </div>
+</section>
+
+<!-- ═══ STATS BAR ═══ -->
+<div class="stats-bar" aria-label="Key statistics">
+  <div class="stats-inner">
+    <div class="fade-up">
+      <div class="stat-num">17</div>
+      <div class="stat-label">Cities Covered</div>
+    </div>
+    <div class="fade-up">
+      <div class="stat-num">10</div>
+      <div class="stat-label">States Reached</div>
+    </div>
+    <div class="fade-up">
+      <div class="stat-num">NAAC A++</div>
+      <div class="stat-label">3.71 / 4 Grade</div>
+    </div>
+    <div class="fade-up">
+      <div class="stat-num">NIRF #62</div>
+      <div class="stat-label">National Ranking 2025</div>
+    </div>
+    <div class="fade-up">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Placement Assistance</div>
+    </div>
+    <div class="fade-up">
+      <div class="stat-num">₹54 LPA</div>
+      <div class="stat-label">Highest Package 2025</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SCHEDULE ═══ -->
+<section class="section" id="schedule" style="background:#fff;" aria-labelledby="sched-title">
+  <div class="section-inner">
+    <h2 class="section-title fade-up" id="sched-title">Spot Counselling <span class="accent">Schedule 2026</span></h2>
+    <p class="section-sub fade-up">Find your nearest city — walk in, get counselled, receive your admission offer the same day.</p>
+
+    <div class="filter-bar fade-up" role="group" aria-label="Filter schedule">
+      <span>Filter:</span>
+      <button class="filter-btn active" data-filter="all">All Cities</button>
+      <button class="filter-btn" data-filter="april">April</button>
+      <button class="filter-btn" data-filter="may">May</button>
+      <button class="filter-btn" data-filter="uttar pradesh">Uttar Pradesh</button>
+      <button class="filter-btn" data-filter="assam">Assam</button>
+    </div>
+
+    <div class="table-wrap fade-up">
+      <table id="scheduleTable" aria-label="Spot counselling city schedule">
+        <thead>
+          <tr>
+            <th scope="col">State</th>
+            <th scope="col">City</th>
+            <th scope="col">Event Date</th>
+            <th scope="col">Venue</th>
+            <th scope="col"><span class="sr-only">Action</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-state="andhra pradesh" data-month="april">
+            <td><span class="state-tag">Andhra Pradesh</span></td>
+            <td><span class="city-bold">Vijayawada</span></td>
+            <td><span class="date-tag">25th April</span></td>
+            <td><span class="venue-cell">Fortune Murali Park</span></td>
+            <td><a href="registration.html?city=Vijayawada" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="assam" data-month="april">
+            <td><span class="state-tag">Assam</span></td>
+            <td><span class="city-bold">Guwahati</span></td>
+            <td><span class="date-tag">19th April</span></td>
+            <td><span class="venue-cell">Hotel Greenwood</span></td>
+            <td><a href="registration.html?city=Guwahati" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="assam" data-month="april">
+            <td><span class="state-tag">Assam</span></td>
+            <td><span class="city-bold">Jorhat</span></td>
+            <td><span class="date-tag">23rd April</span></td>
+            <td><span class="venue-cell">D Royal Palm</span></td>
+            <td><a href="registration.html?city=Jorhat" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="assam" data-month="april">
+            <td><span class="state-tag">Assam</span></td>
+            <td><span class="city-bold">Dibrugarh</span></td>
+            <td><span class="date-tag">25th April</span></td>
+            <td><span class="venue-cell">Hotel Tea County</span></td>
+            <td><a href="registration.html?city=Dibrugarh" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="assam" data-month="april">
+            <td><span class="state-tag">Assam</span></td>
+            <td><span class="city-bold">Tinsukia</span></td>
+            <td><span class="date-tag">26th April</span></td>
+            <td><span class="venue-cell">Royal Highness</span></td>
+            <td><a href="registration.html?city=Tinsukia" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="bihar" data-month="may">
+            <td><span class="state-tag">Bihar</span></td>
+            <td><span class="city-bold">Patna</span></td>
+            <td><span class="date-tag">3rd May</span></td>
+            <td><span class="venue-cell">Red Velvet – Income Tax</span></td>
+            <td><a href="registration.html?city=Patna" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="gujarat" data-month="april">
+            <td><span class="state-tag">Gujarat</span></td>
+            <td><span class="city-bold">Ahmedabad</span></td>
+            <td><span class="date-tag">26th April</span></td>
+            <td><span class="venue-cell">Courtyard by Marriott Ahmedabad</span></td>
+            <td><a href="registration.html?city=Ahmedabad" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="jharkhand" data-month="april">
+            <td><span class="state-tag">Jharkhand</span></td>
+            <td><span class="city-bold">Ranchi</span></td>
+            <td><span class="date-tag">19th April</span></td>
+            <td><span class="venue-cell">Hotel Landmark</span></td>
+            <td><a href="registration.html?city=Ranchi" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="kerala" data-month="april">
+            <td><span class="state-tag">Kerala</span></td>
+            <td><span class="city-bold">Kannur</span></td>
+            <td><span class="date-tag">26th April</span></td>
+            <td><span class="venue-cell">Hotel Royal Omars Kannur</span></td>
+            <td><a href="registration.html?city=Kannur" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="nagaland" data-month="april">
+            <td><span class="state-tag">Nagaland</span></td>
+            <td><span class="city-bold">Dimapur</span></td>
+            <td><span class="date-tag">21st April</span></td>
+            <td><span class="venue-cell">Hotel Akasha</span></td>
+            <td><a href="registration.html?city=Dimapur" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="tamil nadu" data-month="april">
+            <td><span class="state-tag">Tamil Nadu</span></td>
+            <td><span class="city-bold">Puducherry</span></td>
+            <td><span class="date-tag">19th April</span></td>
+            <td><span class="venue-cell">Prince Hall</span></td>
+            <td><a href="registration.html?city=Puducherry" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="tamil nadu" data-month="may">
+            <td><span class="state-tag">Tamil Nadu</span></td>
+            <td><span class="city-bold">Hosur</span></td>
+            <td><span class="date-tag">3rd May</span></td>
+            <td><span class="venue-cell">Kannika Convention Hall</span></td>
+            <td><a href="registration.html?city=Hosur" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="tripura" data-month="may">
+            <td><span class="state-tag">Tripura</span></td>
+            <td><span class="city-bold">Agartala</span></td>
+            <td><span class="date-tag">3rd May</span></td>
+            <td><span class="venue-cell">Hotel Parkline</span></td>
+            <td><a href="registration.html?city=Agartala" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="uttar pradesh" data-month="april">
+            <td><span class="state-tag">Uttar Pradesh</span></td>
+            <td><span class="city-bold">Lucknow</span></td>
+            <td><span class="date-tag">12th April</span></td>
+            <td><span class="venue-cell">Hotel Diamond / The Royal Vista</span></td>
+            <td><a href="registration.html?city=Lucknow" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="uttar pradesh" data-month="april">
+            <td><span class="state-tag">Uttar Pradesh</span></td>
+            <td><span class="city-bold">Prayagraj</span></td>
+            <td><span class="date-tag">16th April</span></td>
+            <td><span class="venue-cell">Hotel Ravisha Continental</span></td>
+            <td><a href="registration.html?city=Prayagraj" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="uttar pradesh" data-month="april">
+            <td><span class="state-tag">Uttar Pradesh</span></td>
+            <td><span class="city-bold">Varanasi</span></td>
+            <td><span class="date-tag">19th April</span></td>
+            <td><span class="venue-cell">Hotel Diamond / The Royal Vista</span></td>
+            <td><a href="registration.html?city=Varanasi" class="reg-link">Register →</a></td>
+          </tr>
+          <tr data-state="uttar pradesh" data-month="april">
+            <td><span class="state-tag">Uttar Pradesh</span></td>
+            <td><span class="city-bold">Gorakhpur</span></td>
+            <td><span class="date-tag">23rd April</span></td>
+            <td><span class="venue-cell">Ramada by Wyndham / Nirvana Sarovar</span></td>
+            <td><a href="registration.html?city=Gorakhpur" class="reg-link">Register →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY ATTEND ═══ -->
+<section class="section why-section" id="why" aria-labelledby="why-title">
+  <div class="section-inner">
+    <h2 class="section-title fade-up" id="why-title">Why Attend <span class="accent">Spot Counselling?</span></h2>
+    <p class="section-sub fade-up">Everything you need to secure your admission — one session, your city, your future.</p>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-icon">⚡</div>
+        <h3>On-the-Spot Admission</h3>
+        <p>Meet eligibility criteria and receive your offer letter the same day — no waiting, no back-and-forth.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🎯</div>
+        <h3>Personalised Guidance</h3>
+        <p>One-on-one career counselling tailored to your specific interests, aptitude, and long-term goals.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">💰</div>
+        <h3>Scholarship Evaluation</h3>
+        <p>Get your academic profile assessed on-site and discover merit scholarships you may qualify for.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">📋</div>
+        <h3>Instant Document Check</h3>
+        <p>Complete document verification on the spot — save weeks of correspondence.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🏢</div>
+        <h3>Placement Insights</h3>
+        <p>Learn about JU's 100% placement assistance, ₹54 LPA highest package and Fortune 500 recruiters.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-icon">🌐</div>
+        <h3>Full JU Overview</h3>
+        <p>Explore programs, campus facilities, research opportunities, scholarships — all in one meeting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COURSES ═══ -->
+<section class="section courses-section" id="courses" aria-labelledby="courses-title">
+  <div class="section-inner">
+    <h2 class="section-title fade-up" id="courses-title">Explore Our <span class="accent">Programs 2026</span></h2>
+    <p class="section-sub fade-up">88 undergraduate · 55 postgraduate · Doctoral programs across 12 schools of study.</p>
+
+    <div class="courses-tabs fade-up" role="tablist" aria-label="Program categories">
+      <button class="tab-btn active" data-tab="eng"  role="tab" aria-selected="true"  aria-controls="panel-eng">Engineering &amp; Tech</button>
+      <button class="tab-btn"        data-tab="mgmt" role="tab" aria-selected="false" aria-controls="panel-mgmt">Management</button>
+      <button class="tab-btn"        data-tab="sci"  role="tab" aria-selected="false" aria-controls="panel-sci">Sciences</button>
+      <button class="tab-btn"        data-tab="com"  role="tab" aria-selected="false" aria-controls="panel-com">Commerce</button>
+      <button class="tab-btn"        data-tab="des"  role="tab" aria-selected="false" aria-controls="panel-des">Design &amp; Arts</button>
+      <button class="tab-btn"        data-tab="law"  role="tab" aria-selected="false" aria-controls="panel-law">Law &amp; Humanities</button>
+    </div>
+
+    <!-- Engineering -->
+    <div class="courses-panel active" id="panel-eng" role="tabpanel">
+      <div class="courses-grid">
+        <div class="course-card fade-up">
+          <div class="course-icon">💻</div>
+          <h3>B.Tech – Computer Science &amp; Engineering</h3>
+          <ul class="course-list">
+            <li>CSE (Core)</li>
+            <li>CSE in Artificial Intelligence &amp; ML</li>
+            <li>CSE in Data Science</li>
+            <li>CSE in Cyber Security</li>
+            <li>CSE in Cloud Computing</li>
+            <li>CSE in IoT</li>
+            <li>CSE in Blockchain Technology</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">⚙️</div>
+          <h3>B.Tech – Other Branches</h3>
+          <ul class="course-list">
+            <li>Electronics &amp; Communication Engineering</li>
+            <li>Mechanical Engineering</li>
+            <li>Civil Engineering</li>
+            <li>Aerospace Engineering</li>
+            <li>Electrical Engineering</li>
+            <li>Mechatronics</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🖥️</div>
+          <h3>BCA – Bachelor of Computer Applications</h3>
+          <ul class="course-list">
+            <li>BCA in Artificial Intelligence</li>
+            <li>BCA in Cyber Security</li>
+            <li>BCA in Cloud Technology</li>
+            <li>BCA in Generative AI</li>
+            <li>BCA in Data Analytics</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🔬</div>
+          <h3>Postgraduate – Engineering</h3>
+          <ul class="course-list">
+            <li>M.Tech in Computer Science</li>
+            <li>M.Tech in Data Science</li>
+            <li>M.Tech in VLSI Design</li>
+            <li>M.Tech in Structural Engineering</li>
+            <li>MCA (Master of Computer Applications)</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Management -->
+    <div class="courses-panel" id="panel-mgmt" role="tabpanel">
+      <div class="courses-grid">
+        <div class="course-card fade-up">
+          <div class="course-icon">📊</div>
+          <h3>BBA – Bachelor of Business Administration</h3>
+          <ul class="course-list">
+            <li>BBA Corporate</li>
+            <li>BBA Finance &amp; Accounting (ACCA-UK)</li>
+            <li>BBA Entrepreneurship (WOW)</li>
+            <li>BBA Sports Management</li>
+            <li>BBA Branding &amp; Advertising</li>
+            <li>BBA Strategic Finance (US CMA)</li>
+            <li>BBA International Finance</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🏢</div>
+          <h3>MBA – Master of Business Administration</h3>
+          <ul class="course-list">
+            <li>MBA Marketing</li>
+            <li>MBA Finance</li>
+            <li>MBA Human Resource Management</li>
+            <li>MBA Business Analytics</li>
+            <li>MBA Digital Marketing</li>
+            <li>MBA Aviation Management</li>
+            <li>MBA Dual Specialisation</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🏋️</div>
+          <h3>Sports &amp; Event Management</h3>
+          <ul class="course-list">
+            <li>B.Sc. in Sports Science</li>
+            <li>B.Sc. Sports Management</li>
+            <li>BBA Sports Management</li>
+            <li>MBA Sports Management</li>
+            <li>BPES – Physical Education</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">✈️</div>
+          <h3>Hospitality &amp; Aviation</h3>
+          <ul class="course-list">
+            <li>BHM – Hotel Management</li>
+            <li>B.Sc. Hospitality &amp; Hotel Administration</li>
+            <li>MBA Aviation Management</li>
+            <li>BMS – Bachelor of Management Studies</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sciences -->
+    <div class="courses-panel" id="panel-sci" role="tabpanel">
+      <div class="courses-grid">
+        <div class="course-card fade-up">
+          <div class="course-icon">🧬</div>
+          <h3>Life Sciences – UG</h3>
+          <ul class="course-list">
+            <li>B.Sc. Biotechnology</li>
+            <li>B.Sc. Microbiology</li>
+            <li>B.Sc. Biochemistry</li>
+            <li>B.Sc. Genetics</li>
+            <li>B.Sc. Forensic Science</li>
+            <li>B.Sc. Botany &amp; Microbiology</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🔭</div>
+          <h3>Physical &amp; Mathematical Sciences – UG</h3>
+          <ul class="course-list">
+            <li>B.Sc. Physics</li>
+            <li>B.Sc. Chemistry</li>
+            <li>B.Sc. Mathematics</li>
+            <li>B.Sc. Computer Science</li>
+            <li>B.Sc. Electronics</li>
+            <li>B.Sc. Statistics</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🧪</div>
+          <h3>Sciences – Postgraduate</h3>
+          <ul class="course-list">
+            <li>M.Sc. Biotechnology</li>
+            <li>M.Sc. Biochemistry</li>
+            <li>M.Sc. Microbiology</li>
+            <li>M.Sc. Data Science</li>
+            <li>M.Sc. Physics / Chemistry</li>
+            <li>M.Sc. Mathematics / Statistics</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🧠</div>
+          <h3>Psychology &amp; Allied Health</h3>
+          <ul class="course-list">
+            <li>B.Sc. Psychology</li>
+            <li>M.Sc. Psychology</li>
+            <li>M.Sc. Clinical Psychology</li>
+            <li>B.Sc. Nutrition &amp; Dietetics</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commerce -->
+    <div class="courses-panel" id="panel-com" role="tabpanel">
+      <div class="courses-grid">
+        <div class="course-card fade-up">
+          <div class="course-icon">📈</div>
+          <h3>B.Com – Bachelor of Commerce</h3>
+          <ul class="course-list">
+            <li>B.Com (General)</li>
+            <li>B.Com (Hons.) – International Accounting &amp; Finance (ACCA-UK)</li>
+            <li>B.Com in Accounting &amp; Finance</li>
+            <li>B.Com in Taxation</li>
+            <li>B.Com in Banking &amp; Insurance</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">💼</div>
+          <h3>M.Com &amp; CA Integrated</h3>
+          <ul class="course-list">
+            <li>M.Com (General)</li>
+            <li>M.Com in Finance</li>
+            <li>M.Com in Accounting</li>
+            <li>M.Com in Taxation</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Design & Arts -->
+    <div class="courses-panel" id="panel-des" role="tabpanel">
+      <div class="courses-grid">
+        <div class="course-card fade-up">
+          <div class="course-icon">🎨</div>
+          <h3>Design – Undergraduate</h3>
+          <ul class="course-list">
+            <li>B.Des. Communication Design</li>
+            <li>B.Sc. Product Design</li>
+            <li>B.Sc. Interior Design</li>
+            <li>B.Sc. Fashion Design</li>
+            <li>B.Sc. Graphic Design</li>
+            <li>BFA – Bachelor of Fine Arts</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🎬</div>
+          <h3>Media &amp; Journalism</h3>
+          <ul class="course-list">
+            <li>BA Journalism &amp; Mass Communication</li>
+            <li>BA Film &amp; Television Production</li>
+            <li>MA Journalism &amp; Mass Communication</li>
+            <li>B.Sc. Animation &amp; VFX</li>
+            <li>B.Sc. Game Design</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🏆</div>
+          <h3>Design – Postgraduate</h3>
+          <ul class="course-list">
+            <li>M.Des. Strategic Innovation &amp; Design</li>
+            <li>M.Des. Communication Design</li>
+            <li>M.Des. Fashion Design</li>
+            <li>M.Sc. Interior Design</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Law -->
+    <div class="courses-panel" id="panel-law" role="tabpanel">
+      <div class="courses-grid">
+        <div class="course-card fade-up">
+          <div class="course-icon">⚖️</div>
+          <h3>Law Programs</h3>
+          <ul class="course-list">
+            <li>BA LLB (Hons.) – 5 years</li>
+            <li>B.Com LLB (Hons.) – 5 years</li>
+            <li>BBA LLB (Hons.) – 5 years</li>
+            <li>LLB (Hons.) – 3 years</li>
+            <li>LLM – Master of Laws</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">🌍</div>
+          <h3>Humanities &amp; Social Sciences</h3>
+          <ul class="course-list">
+            <li>BA Economics</li>
+            <li>BA Political Science</li>
+            <li>BA English Literature</li>
+            <li>BA Sociology</li>
+            <li>MA Economics</li>
+            <li>MA English</li>
+            <li>MA Sociology</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+        <div class="course-card fade-up">
+          <div class="course-icon">📚</div>
+          <h3>Education &amp; Research</h3>
+          <ul class="course-list">
+            <li>B.Ed. – Bachelor of Education</li>
+            <li>M.Ed. – Master of Education</li>
+            <li>Ph.D. – Engineering / Sciences / Management / Law / Commerce / Humanities</li>
+          </ul>
+          <a class="course-learn" href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Learn more →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="section about-section" id="about" aria-labelledby="about-title">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-content">
+        <h2 class="section-title fade-up" id="about-title">About <span class="accent">JAIN University</span></h2>
+        <p class="fade-up">JAIN (Deemed-to-be University) is a vibrant academic community with 21,000+ students across 10 campuses in Bengaluru and Kochi. Founded in 1990, the university holds NAAC A++ accreditation with a score of 3.71/4 — one of the highest in India.</p>
+        <p class="fade-up">With 1,370 faculty members, 88 UG programs, 55 PG programs, and deep industry ties through 300+ MoUs, JAIN University provides world-class education that makes graduates industry-ready from day one.</p>
+        <div class="about-badges fade-up">
+          <div class="about-badge">
+            <div class="ab-num">NAAC A++</div>
+            <div class="ab-lbl">3.71/4 Score</div>
+          </div>
+          <div class="about-badge">
+            <div class="ab-num">NIRF #62</div>
+            <div class="ab-lbl">2025 Ranking</div>
+          </div>
+          <div class="about-badge">
+            <div class="ab-num">₹54 LPA</div>
+            <div class="ab-lbl">Highest Package</div>
+          </div>
+          <div class="about-badge">
+            <div class="ab-num">21,000+</div>
+            <div class="ab-lbl">Students</div>
+          </div>
+          <div class="about-badge">
+            <div class="ab-num">50+</div>
+            <div class="ab-lbl">Countries</div>
+          </div>
+        </div>
+      </div>
+      <div class="campus-img-wrap fade-up">
+        <img src="https://www.jainuniversity.ac.in/images/Jain-University-Bangalore.jpg"
+             alt="JAIN University Bengaluru Campus"
+             loading="lazy"
+             onerror="this.parentNode.innerHTML='<div class=\'campus-placeholder\'><span>🏛️</span><p>JAIN University, Bengaluru</p></div>'">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section class="section testi-section" aria-labelledby="testi-title">
+  <div class="section-inner">
+    <h2 class="section-title fade-up" id="testi-title">What Our <span class="accent">Students Say</span></h2>
+    <p class="section-sub fade-up">Stories from students who attended Spot Counselling and secured their future at JU.</p>
+    <div class="testi-grid">
+      <div class="testi-card fade-up">
+        <p class="testi-text">The Spot Counselling session in Lucknow was life-changing. I walked in confused and left with my admission confirmed and a merit scholarship. The counsellors were incredibly thorough.</p>
+        <div class="testi-author">
+          <div class="avatar">R</div>
+          <div>
+            <div class="author-name">Rahul Sharma</div>
+            <div class="author-prog">B.Tech CSE, 2025 Batch</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-up">
+        <p class="testi-text">I attended the Patna session. The team explained every scholarship I could apply for — that conversation alone saved my family over ₹1.5 lakhs. Highly recommended.</p>
+        <div class="testi-author">
+          <div class="avatar">A</div>
+          <div>
+            <div class="author-name">Ananya Patel</div>
+            <div class="author-prog">MBA Finance, 2025 Batch</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card fade-up">
+        <p class="testi-text">The counsellors at Ranchi helped me choose the right BBA specialisation. Having a real conversation instead of just browsing a website made all the difference.</p>
+        <div class="testi-author">
+          <div class="avatar">V</div>
+          <div>
+            <div class="author-name">Vikram Singh</div>
+            <div class="author-prog">BBA Sports Management, 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq-section" id="faq" aria-labelledby="faq-title">
+  <div class="section-inner">
+    <h2 class="section-title fade-up" id="faq-title">Frequently Asked <span class="accent">Questions</span></h2>
+    <p class="section-sub fade-up">Everything you need to know before attending Spot Counselling.</p>
+    <div class="faq-list fade-up" role="list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What is Spot Counselling?<span class="faq-chevron" aria-hidden="true">▾</span></button>
+        <div class="faq-a" role="region">Spot Counselling is an opportunity to meet JAIN University representatives directly in your city. You can discuss course options, career paths, get your documents verified, and if you meet the eligibility criteria, receive an on-the-spot admission offer the same day.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What documents should I bring?<span class="faq-chevron" aria-hidden="true">▾</span></button>
+        <div class="faq-a" role="region">Bring your 10th and 12th mark sheets, transfer certificate, character certificate, government ID (Aadhaar/passport), 4 passport-sized photographs, and entrance exam scorecards (JEE/NEET/CAT etc.) if applicable. Carry originals + 2 sets of photocopies.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Are scholarships available at Spot Counselling?<span class="faq-chevron" aria-hidden="true">▾</span></button>
+        <div class="faq-a" role="region">Yes. JAIN University offers merit scholarships (Medha, Eklavya etc.) for qualifying students. Our team at the venue will assess your academic profile on-the-spot and guide you on scholarships available for your marks, category, and chosen program.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What if I cannot attend the event in my city?<span class="faq-chevron" aria-hidden="true">▾</span></button>
+        <div class="faq-a" role="region">You can still apply online at jainuniversity.ac.in. However, attending Spot Counselling gives you significant advantages — personalised guidance, instant document verification, and on-the-spot admission decisions that can save weeks of effort.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is registration mandatory to attend?<span class="faq-chevron" aria-hidden="true">▾</span></button>
+        <div class="faq-a" role="region">Walk-ins are welcome, but registering in advance is strongly recommended. It allows our team to prepare your profile beforehand, assign you a priority slot, and ensure you receive dedicated time with a counsellor without long queues.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What entrance exams does JAIN University accept?<span class="faq-chevron" aria-hidden="true">▾</span></button>
+        <div class="faq-a" role="region">JAIN University conducts its own Jain Entrance Test (JET). It also accepts JEE Main and CUET scores for B.Tech, CAT/MAT/CMAT for MBA, CLAT for Law programs, and GATE/KPGCET for M.Tech. Strong scores in these exams may also help you qualify for scholarships.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BAND ═══ -->
+<section class="cta-band" aria-label="Call to action">
+  <h2 class="fade-up">Your City. Your Date. Your Future.</h2>
+  <p class="fade-up">Spot Counselling is coming to 17 cities across India in April–May 2026. Don't miss your nearest session.</p>
+  <a href="registration.html" class="btn-white fade-up">Register for Free → </a>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assets/Jain-logo.png" alt="JAIN (Deemed-to-be University)" width="160" height="40">
+    </div>
+    <p class="footer-desc">Ranked among India's top universities (NIRF #62 · NAAC A++). Shaping industry-ready graduates since 1990.</p>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📍 #44/4, District Fund Road,<br>Jayanagar 9th Block,<br>Bengaluru – 560069</p>
+        <a href="tel:08069279444">📞 080-6927 9444</a>
+        <a href="tel:+917337618222">📱 +91 73376 18222</a>
+        <a href="mailto:admissions@jainuniversity.ac.in">✉️ admissions@jainuniversity.ac.in</a>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#schedule">Schedule</a>
+        <a href="#courses">All Courses</a>
+        <a href="#about">About JU</a>
+        <a href="#faq">FAQs</a>
+        <a href="registration.html">Register</a>
+      </div>
+      <div class="footer-col">
+        <h4>Programs</h4>
+        <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Engineering &amp; Tech</a>
+        <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Management</a>
+        <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Design &amp; Arts</a>
+        <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Law &amp; Commerce</a>
+        <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Sciences</a>
+      </div>
+      <div class="footer-col">
+        <h4>University</h4>
+        <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Main Website</a>
+        <a href="https://www.immersivetourz.com/fet/index.html" target="_blank" rel="noopener">Virtual Campus Tour</a>
+        <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Scholarships</a>
+        <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Placements</a>
+        <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Research</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 JAIN (Deemed-to-be University). All Rights Reserved.</span>
+      <span>NAAC A++ · NIRF #62 · UGC Approved · 100% Placement Assistance</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ WHATSAPP WIDGET ═══ -->
+<div class="wa-widget" role="complementary" aria-label="WhatsApp chat">
+  <div class="wa-bubble" id="waBubble" role="dialog" aria-label="WhatsApp chat prompt">
+    <button class="wa-close" id="waClose" aria-label="Close">✕</button>
+    <strong>👋 Chat with us on WhatsApp</strong>
+    Have questions about admissions or Spot Counselling 2026? We're here to help!
+  </div>
+  <button class="wa-btn" id="waBtn" aria-label="Open WhatsApp chat" title="Chat with admissions on WhatsApp">
+    <span class="wa-badge" id="waBadge" aria-label="1 new message">1</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+</div>
+
+<!-- ═══ BACK TO TOP ═══ -->
+<button class="back-top" id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+
+<!-- ═══ COOKIE BANNER ═══ -->
+<div class="cookie-banner" id="cookieBanner" role="banner" aria-label="Cookie consent">
+  <p>We use cookies to improve your experience. By continuing, you agree to our <a href="https://www.jainuniversity.ac.in" target="_blank" rel="noopener">Privacy Policy</a>.</p>
+  <button class="cookie-btn" id="cookieAccept">Accept &amp; Continue</button>
+</div>
+
+<!-- Scripts (deferred, no inline JS) -->
+<script src="js/main.js" defer></script>
+</body>
+</html>
